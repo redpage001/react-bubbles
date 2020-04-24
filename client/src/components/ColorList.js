@@ -23,6 +23,11 @@ const ColorList = ({ colors, updateColors }) => {
       .put(`/api/colors/${colorToEdit.id}`, colorToEdit)
       .then(response => {
         console.log({ response })
+        updateColors(
+          colors.map(color => {
+            return color.id === colorToEdit.id ? (response.data) : color
+          })
+        )
       })
       .catch(err => {
         console.log({ err })
@@ -38,6 +43,7 @@ const ColorList = ({ colors, updateColors }) => {
       .post("/api/colors", newColor)
       .then(response => {
         console.log({ response })
+        updateColors(response.data)
         setNewColor(initialColor)
       })
       .catch(err => {
@@ -50,6 +56,7 @@ const ColorList = ({ colors, updateColors }) => {
       .delete(`/api/colors/${color.id}`)
       .then(response => {
         console.log({ response })
+        updateColors(colors.filter(item => item.id !== color.id))
       })
       .catch(err => {
         console.log({ err })
