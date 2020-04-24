@@ -36,9 +36,10 @@ const Login = () => {
   // when you have handled the token, navigate to the BubblePage route
   return (
     <div className="formContainer">
-                <h2>Login</h2>
+                <h1>Login</h1>
                 <form onSubmit={login}>
                     <input 
+                        className="formInput"
                         placeholder="Username..."
                         type="text"
                         name="username"
@@ -47,6 +48,7 @@ const Login = () => {
                     />
                     <br/>
                     <input 
+                        className="formInput"
                         placeholder="Password..."
                         type="password"
                         name="password"
@@ -54,7 +56,7 @@ const Login = () => {
                         onChange={handleChange}
                     />
                     <br/>
-                    <button>Log In</button>
+                    <button className="formButton" >Log In</button>
                 </form>
             </div>
   );

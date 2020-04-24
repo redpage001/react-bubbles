@@ -20,6 +20,11 @@ body,
   }
 }
 
+nav{
+  padding: 0 15px;
+  border-right: solid 2px black;
+}
+
 .spacer {
   height: 100%;
 }
@@ -34,6 +39,8 @@ body,
   height: 100%;
   width: 300px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  display: flex;
+  flex-direction: column-reverse;
 
   ul {
     list-style: none;
@@ -96,4 +103,53 @@ form {
     padding: 3px 8px;
     margin-top: 16px;
   }
+}
+
+.homeDiv {
+  width: 80%;
+  margin: 0 10%;
+}
+
+.formContainer {
+  width: 60%;
+  margin: 0 20%;
+
+  h1 {
+    margin-top: 90px;
+    margin-bottom: -35px;
+    font-size: 3.25rem;
+    font-family: 'Luckiest Guy';
+  }
+}
+
+.titleHeader {
+  font-size: 8rem;
+  margin-top: 200px;
+  margin-bottom: -50px;
+  font-family: 'Luckiest Guy';
+}
+
+h2 {
+  font-family: 'Acme';
+  font-size: 2rem;
+}
+
+p {
+  font-family: 'Luckiest Guy';
+}
+
+.formInput {
+  width: 80%;
+  margin: 0 10%;
+  height: 5vh;
+  font-size: 1rem;
+}
+
+.formButton {
+  width: 40%;
+  margin: 0 30%;
+  height: 6vh;
+  font-size: 1rem;
+  border-radius: 15px;
+  font-weight: bold;
 }
